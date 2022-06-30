@@ -10255,6 +10255,49 @@ textarea.form-control-lg {
   }
 }
 /********** Template CSS **********/
+.loader {
+  width: 48px;
+  height: 48px;
+  background: var(--bs-light);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  color: var(--bs-primary);
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 25px 2px, 10px 22px;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fa-solid {
   font-size: 14px;
 }
@@ -10354,13 +10397,13 @@ textarea.form-control-lg {
 }
 /*** Navbar ***/
 .sidebar .navbar .navbar-nav .nav-link {
-  padding: 7px 20px;
+  padding: 3px 20px;
   color: var(--bs-light);
   font-weight: 500;
   border-left: 3px solid var(--bs-secondary);
   border-radius: 0.25rem;
   outline: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sidebar .navbar .navbar-nav .nav-link:hover,
@@ -10387,7 +10430,7 @@ textarea.form-control-lg {
 
 .sidebar .navbar .dropdown-toggle::after {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 15px;
   border: none;
   content: "\f107";
@@ -10404,7 +10447,7 @@ textarea.form-control-lg {
   padding-left: 38px;
   border-radius: 0.25rem;
   color: var(--bs-light);
-  font-size: 13px;
+  font-size: 12px;
   transition: 0.5s;
 }
 
@@ -10442,17 +10485,22 @@ textarea.form-control-lg {
 
 .content .navbar .sidebar-toggler,
 .content .navbar .navbar-nav .nav-link i {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: var(--bs-dark);
-  border-radius: 40px;
+  border-radius: 50%;
 }
 
 .content .navbar .dropdown-item {
   color: var(--bs-light);
+}
+
+.see-all-noti {
+  color: var(--bs-primary) !important;
+  background-color: var(--bs-dark);
 }
 
 .content .navbar .dropdown-item:hover,
@@ -10551,8 +10599,9 @@ textarea.form-control-lg {
 
 .notification {
   position: absolute;
-  right: -8px;
+  right: -7px;
   top: 5px;
+  font-size: 10px;
 }
 
 ::-webkit-scrollbar {
