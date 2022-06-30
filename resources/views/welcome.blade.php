@@ -306,7 +306,7 @@
             data: {
                 labels: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
                 datasets: [{
-                    label: "Sales",
+                    label: "Viewers",
                     fill: false,
                     borderColor: "rgba(24, 210, 110, .7)",
                     backgroundColor: "rgba(24, 210, 110, .5)",
